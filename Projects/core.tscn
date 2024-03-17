@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://djqxwjlmctkp2"]
+
+[ext_resource type="Texture2D" uid="uid://31pi1jctkntg" path="res://assets/core_green.png" id="1_gcgxo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqapw"]
+atlas = ExtResource("1_gcgxo")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7ixu"]
+atlas = ExtResource("1_gcgxo")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mchaa"]
+atlas = ExtResource("1_gcgxo")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbo05"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqapw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7ixu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mchaa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(571, 273)
+sprite_frames = SubResource("SpriteFrames_mbo05")
+frame_progress = 0.332802
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
