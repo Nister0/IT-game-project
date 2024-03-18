@@ -1,0 +1,8 @@
+res://world.tscn
+res://Player.tscn
+res://enemy.tscn
+res://Player.gd
+res://Enemy.gd
+res://world.gd
+res://HUD.gd
+res://hud.tscn

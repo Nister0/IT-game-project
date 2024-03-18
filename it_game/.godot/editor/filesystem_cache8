@@ -1,0 +1,20 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1710780627
+core.tscn::PackedScene::7825427956437743929::1710780590::0::1::::<><>::uid://31pi1jctkntg::::res://assets/core_green.png
+Enemy.gd::GDScript::-1::1710780590::0::1::::<>CharacterBody2D<>::
+enemy.tscn::PackedScene::4200987615541308835::1710780590::0::1::::<><>::res://Enemy.gd<>uid://bwy6d71acj00q::::res://assets/spr_enemy_reg_hurt_strip4.png<>uid://ctaofgkxq4e3b::::res://assets/spr_monster_reg_strip4.png
+icon.svg::CompressedTexture2D::5723205666367402601::1710780590::1710780627::1::::<><>::
+Player.gd::GDScript::-1::1710780590::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::4207457462382782444::1710780590::0::1::::<><>::res://Player.gd<>uid://dgys3edlafcbi::::res://assets/char_blue_1.png<>uid://dckvafh58ef6n::::res://assets/AnimationSheet_Character.png
+world.tscn::PackedScene::8851098814045511202::1710780590::0::1::::<><>::uid://b7qmb4ylgadx5::::res://assets/59142dc55bda28fc9425a3831af22345.png<>uid://31pi1jctkntg::::res://assets/core_green.png<>uid://b07ehent6abgm::::res://Player.tscn<>uid://b038wgajfu6ep::::res://enemy.tscn
+::res://assets/::1710780590
+59142dc55bda28fc9425a3831af22345.png::CompressedTexture2D::4666225674642468344::1710780590::1710780627::1::::<><>::
+AnimationSheet_Character.png::CompressedTexture2D::7321558847581768943::1710780590::1710780627::1::::<><>::
+character.png::CompressedTexture2D::5469455169604975560::1710780590::1710780627::1::::<><>::
+char_blue_1.png::CompressedTexture2D::7631083302331867898::1710780590::1710780627::1::::<><>::
+char_blue_2.png::CompressedTexture2D::6384497232650766512::1710780590::1710780627::1::::<><>::
+core_green.png::CompressedTexture2D::2019887864340210496::1710780590::1710780627::1::::<><>::
+New Piskel.png::CompressedTexture2D::957245985895497705::1710780590::1710780627::1::::<><>::
+Skeleton.png::CompressedTexture2D::7472153323853738184::1710780590::1710780627::1::::<><>::
+spr_enemy_reg_hurt_strip4.png::CompressedTexture2D::3982009614899898798::1710780590::1710780627::1::::<><>::
+spr_monster_reg_strip4.png::CompressedTexture2D::6107288695032758929::1710780590::1710780627::1::::<><>::

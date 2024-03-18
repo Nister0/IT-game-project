@@ -1,8 +1,13 @@
 extends CharacterBody2D
 
+signal hit
 var speed = 200
 var screen_size 
 var is_attacking = false
+var health = 100
+var damage = -34
+@onready var mob = get_parent().get_node("Enemy")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -31,20 +36,23 @@ func _process(delta):
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite2D.play()
 		
-	if velocity.x != 0:
+	if velocity.x != 0 and health > 0:
 		$AnimatedSprite2D.animation = "walk"
 		$AnimatedSprite2D.flip_v = false
 		$AnimatedSprite2D.flip_h = velocity.x < 0
-	#elif velocity.y != 0:
-		#$AnimatedSprite2D.animation = "up"
-		#$AnimatedSprite2D.flip_v = velocity.y > 0
-	#elif velocity.x == 0 and velocity.y == 0:
-		#$AnimatedSprite2D.animation = "idle
+		
 	elif Input.is_action_pressed("click_left"):
 		$AnimatedSprite2D.animation = "slash"
 	
-	elif Input.is_action_pressed("click_right"):
-		$AnimatedSprite2D.animation = "block"
-	
+	elif health <= 0:
+		$AnimatedSprite2D.animation = "death"
+		hit.emit()
 	else:
 		$AnimatedSprite2D.animation = "idle"
+	
+	if health < 100 and health > 0:
+		health += 0.05
+
+func _on_area_2d_body_entered(body):
+	health += mob.damage
+	

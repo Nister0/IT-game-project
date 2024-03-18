@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b038wgajfu6ep"]
+[gd_scene load_steps=15 format=3 uid="uid://b038wgajfu6ep"]
 
 [ext_resource type="Script" path="res://Enemy.gd" id="1_tlq2h"]
 [ext_resource type="Texture2D" uid="uid://bwy6d71acj00q" path="res://assets/spr_enemy_reg_hurt_strip4.png" id="2_2pg7n"]
@@ -77,8 +77,11 @@ animations = [{
 radius = 12.0
 height = 24.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttqrp"]
+radius = 11.0
+
 [node name="Enemy" type="CharacterBody2D"]
-position = Vector2(246, 153)
+position = Vector2(260, 144)
 collision_layer = 2
 collision_mask = 3
 motion_mode = 1
@@ -102,4 +105,12 @@ debug_enabled = true
 wait_time = 0.5
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ttqrp")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
